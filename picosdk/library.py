@@ -69,7 +69,7 @@ class Library(object):
 
         # RaspberryPi
         if sys.platform == 'linux2':
-            library_path = f"/opt/picoscope/lib/lib{self.name}.so"
+            library_path = f"/opt/picoscope/lib/lib{self.name.lower()}.so"
             if not os.path.exists(library_path):
                 raise CannotFindPicoSDKError("PicoScope is not installed or cannot be found.")
 
